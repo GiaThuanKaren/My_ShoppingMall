@@ -1,7 +1,14 @@
 import "./Item.css";
 // import ""
-function Item() {
-    const name =["Mariana","Marghiata","Americana"]
+import {io} from "socket.io-client"
+const socket= io("localhost:5000")
+function Item({data}) {
+  const name =["Mariana","Marghiata","Americana"]
+  const SendOrder=function(){
+    socket.emit("send-order",{
+      data:data
+    })
+  }
   return (
     <div className="lg:h-max lg:basis-1/4 lg:grow-0 lg:shrink-0 ">
       <div className="text-center p-3  w-full">
@@ -15,7 +22,10 @@ function Item() {
         <div className="bg-slate-300 min-w-max">Medium</div>
         <div className="flex p-1 justify-between">
             <h2>3.99$</h2>
-            <button className="p-1 border border-red-400 rounded-lg px-2"> + Add </button>
+            <button onClick={(e)=>{
+              console.log(e);
+              SendOrder(e.target);
+            }} className="p-1 border border-red-400 rounded-lg px-2"> + Add </button>
         </div>
       </div>
     </div>
