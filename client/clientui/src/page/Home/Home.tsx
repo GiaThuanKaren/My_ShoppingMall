@@ -6,7 +6,9 @@ function Home() {
   return (
     <>
       <MainHeader />
-      <Grid container></Grid>
+      <Grid container>
+        
+      </Grid>
     </>
   );
 }

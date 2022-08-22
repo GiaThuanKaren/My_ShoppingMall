@@ -245,7 +245,7 @@ export default function MainHeader() {
               component="div"
               sx={{ display: { xs: "none", sm: "block" } }}
             >
-              MUI
+              My Shop
             </Typography>
             <Search>
               <SearchIconWrapper>
