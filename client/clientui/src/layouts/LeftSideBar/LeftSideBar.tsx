@@ -1,19 +1,12 @@
 import { Grid } from "@mui/material";
 import React, { FC } from "react";
+import { PropsSize } from "../../models";
 
 
-interface Props{
-    Arr:[
-        lg:Number,
-        xl:Number,
-        md:Number,
-        sm:Number,
-        xs:Number,
-    ]
-}
 
 
-const LeftSideBar:FC<Props> = function ({Arr}) {
+
+const LeftSideBar:FC<PropsSize> = function ({List}) {
   return (
     <>
       <Grid item lg={3} xl={3} >
