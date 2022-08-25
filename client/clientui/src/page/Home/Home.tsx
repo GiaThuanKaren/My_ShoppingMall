@@ -1,11 +1,12 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { MainHeader } from "../../components";
+import { HomeSlider, MainHeader } from "../../components";
 
 function Home() {
   return (
     <>
       <MainHeader />
+      <HomeSlider />
       <Grid container>
         
       </Grid>
