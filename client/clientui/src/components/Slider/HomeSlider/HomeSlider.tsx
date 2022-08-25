@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // import required modules
-import { Navigation, Autoplay,Pagination } from "swiper";
+import { Navigation, Autoplay, Pagination } from "swiper";
 import { FetchBanner } from "../../../api";
 
 interface StateType {
@@ -51,7 +51,11 @@ export default function HomeSlider() {
               <>
                 <SwiperSlide>
                   <img
+                    width={"100%"}
+                    height={"auto"}
+                    style={{objectFit:"contain"}}
                     src={`https://cdn.vuahanghieu.com/unsafe/0x540/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/${item.image_url}`}
+                    alt={item.title}
                   />
                 </SwiperSlide>
               </>
