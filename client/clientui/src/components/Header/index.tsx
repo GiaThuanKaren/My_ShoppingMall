@@ -223,6 +223,7 @@ export default function MainHeader() {
         open={state["left"]}
         onClose={toggleDrawer("left", false)}
       >
+        
         {list('left')}
       </Drawer>
       <Box sx={{ flexGrow: 1 }}>
