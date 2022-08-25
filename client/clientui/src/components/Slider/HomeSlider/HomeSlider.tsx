@@ -34,6 +34,7 @@ export default function HomeSlider() {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+        loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -53,7 +54,7 @@ export default function HomeSlider() {
                   <img
                     width={"100%"}
                     height={"auto"}
-                    style={{objectFit:"contain"}}
+                    style={{ objectFit: "contain" }}
                     src={`https://cdn.vuahanghieu.com/unsafe/0x540/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/${item.image_url}`}
                     alt={item.title}
                   />

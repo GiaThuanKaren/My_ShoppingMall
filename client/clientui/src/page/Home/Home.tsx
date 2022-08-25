@@ -8,7 +8,7 @@ function Home() {
       <MainHeader />
       <HomeSlider />
       <Grid container>
-        
+          
       </Grid>
     </>
   );

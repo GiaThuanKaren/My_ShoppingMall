@@ -33,4 +33,6 @@ const FetchPopularProduct = async function () {
     }
 }
 
-export { FetchBanner, FetchCatologe };
+
+
+export { FetchBanner, FetchCatologe ,FetchPopularProduct };
