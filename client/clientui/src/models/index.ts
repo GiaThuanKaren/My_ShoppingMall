@@ -1,3 +1,5 @@
+import { PaletteMode } from "@mui/material"
+
 export interface PropsSize {
     List: [
         lg: Number,
@@ -15,6 +17,6 @@ export interface GlobalStateType {
         Cart: []
     },
     theme: {
-        theme: String
+        theme: PaletteMode
     }
 }

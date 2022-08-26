@@ -18,19 +18,25 @@ function ListProduct({
     <>
       <Box sx={{ margin: "5px 0" }}>
         <Typography
+          
           component={"h3"}
           fontSize={"1.2rem"}
           fontWeight={500}
           textAlign={isTittleCenter && "center"}
         >
           {tittle}
+          {tittle}
         </Typography>
-        <Grid container spacing={5}>
+        <Grid container spacing={3}>
           {/* <CardProduct /> */}
           {Data.map((item: any, index: any) => {
             return (
               <>
-                <CardProduct imageUrl={item.imageM} tittle={item.title} />
+                <CardProduct
+                  imageUrl={item.imageM}
+                  tittle={item.title}
+                  price={item.price}
+                />
               </>
             );
           })}

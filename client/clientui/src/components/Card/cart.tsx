@@ -8,9 +8,10 @@ import { CardActionArea, Grid } from "@mui/material";
 interface Props {
   tittle?: string;
   imageUrl?: string;
+  price?:number
 }
 
-export default function CardProduct({ imageUrl = "", tittle = "" }: Props) {
+export default function CardProduct({ imageUrl = "", tittle = "" ,price}: Props) {
   return (
     <>
       <Grid item xl={2} lg={2} md={2} sm={4} xs={6}>
@@ -30,10 +31,9 @@ export default function CardProduct({ imageUrl = "", tittle = "" }: Props) {
               <Typography gutterBottom component="p">
                 {tittle}
               </Typography>
-              {/* <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography> */}
+              <Typography variant="body2" color="text.secondary">
+                {price}
+              </Typography>
             </CardContent>
           </CardActionArea>
         </Card>

@@ -23,12 +23,12 @@ const FetchCatologe = async function () {
 }
 
 
-const FetchProductByCatologe = async function (){
-    try{
+const FetchProductByCatologe = async function () {
+    try {
         let data = await axios.get(PRODUCT_BY_CATOLOGE)
         return data.data
-    }catch(e){
-        console.log(e,"Fetch Prodcut By Catologe");
+    } catch (e) {
+        console.log(e, "Fetch Prodcut By Catologe");
     }
 }
 
@@ -44,4 +44,4 @@ const FetchPopularProduct = async function () {
 
 
 
-export { FetchBanner, FetchCatologe ,FetchPopularProduct ,FetchProductByCatologe};
+export { FetchBanner, FetchCatologe, FetchPopularProduct, FetchProductByCatologe };
