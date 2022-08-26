@@ -269,7 +269,7 @@ export default function MainHeader() {
                   onChange={() => {
                     console.log("change");
                     let payload =
-                      GlobalState.theme.theme == "dark" ? "light" :"dark" ;
+                      GlobalState.theme.theme == "dark" ? "light" : "dark";
                     dispatchState(ActionTheme.SetTheme(payload));
                   }}
                   color="secondary"

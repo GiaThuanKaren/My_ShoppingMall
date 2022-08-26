@@ -51,9 +51,7 @@ function MainLayout({ children }: Props) {
   //   }
   // });
   console.log("Change state Global 1", GlobalState.theme);
-  const ThemeSystem = createTheme(
-    getDesignTokens(GlobalState.theme.theme)
-  );
+  const ThemeSystem = createTheme(getDesignTokens(GlobalState.theme.theme));
   return (
     <>
       <ThemeProvider theme={ThemeSystem}>
