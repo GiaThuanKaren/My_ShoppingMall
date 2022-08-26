@@ -23,6 +23,15 @@ const FetchCatologe = async function () {
 }
 
 
+const FetchProductByCatologe = async function (){
+    try{
+        let data = await axios.get(PRODUCT_BY_CATOLOGE)
+        return data.data
+    }catch(e){
+        console.log(e,"Fetch Prodcut By Catologe");
+    }
+}
+
 const FetchPopularProduct = async function () {
     try {
         let data = await axios.get(POPULAR_LINK)
@@ -35,4 +44,4 @@ const FetchPopularProduct = async function () {
 
 
 
-export { FetchBanner, FetchCatologe ,FetchPopularProduct };
+export { FetchBanner, FetchCatologe ,FetchPopularProduct ,FetchProductByCatologe};

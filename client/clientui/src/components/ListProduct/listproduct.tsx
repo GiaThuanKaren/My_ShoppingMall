@@ -4,17 +4,36 @@ import CardProduct from "../Card/cart";
 
 import style from "./listproduct.module.css";
 interface Prop1 {
-  tittle: String;
-  Data: [];
-  isTittleCenter?:Boolean
+  tittle?: String;
+  Data?: [];
+  isTittleCenter?: Boolean;
 }
-function ListProduct({ tittle = "Default Tittle", Data = [],isTittleCenter=false }: Prop1) {
+function ListProduct({
+  tittle = "Default Tittle",
+  Data = [],
+  isTittleCenter = false,
+}: Prop1) {
+  console.log(Data);
   return (
     <>
-      <Box>
-        <Typography component={"p"} textAlign={isTittleCenter &&"center"}>{tittle}</Typography>
-        <Grid container spacing={3}>
-          <CardProduct />
+      <Box sx={{ margin: "5px 0" }}>
+        <Typography
+          component={"h3"}
+          fontSize={"1.2rem"}
+          fontWeight={500}
+          textAlign={isTittleCenter && "center"}
+        >
+          {tittle}
+        </Typography>
+        <Grid container spacing={5}>
+          {/* <CardProduct /> */}
+          {Data.map((item: any, index: any) => {
+            return (
+              <>
+                <CardProduct imageUrl={item.imageM} tittle={item.title} />
+              </>
+            );
+          })}
         </Grid>
       </Box>
     </>
