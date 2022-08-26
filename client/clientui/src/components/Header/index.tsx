@@ -22,7 +22,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 
-import { Divider, Drawer } from "@mui/material";
+import { Divider, Drawer, Switch } from "@mui/material";
+import { UseGlobal } from "../../hooks";
+// import { ActionTheme } from "../../store/Reducers/ThemeReduces";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -65,6 +67,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 type Anchor = "top" | "left" | "bottom" | "right";
 export default function MainHeader() {
+  const { dispatchState, ActionTheme, GlobalState } = UseGlobal();
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -108,7 +111,7 @@ export default function MainHeader() {
   const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
-
+  const label = { inputProps: { "aria-label": "Switch demo" } };
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -223,8 +226,7 @@ export default function MainHeader() {
         open={state["left"]}
         onClose={toggleDrawer("left", false)}
       >
-        
-        {list('left')}
+        {list("left")}
       </Drawer>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
@@ -237,8 +239,7 @@ export default function MainHeader() {
               sx={{ mr: 2 }}
               onClick={toggleDrawer("left", true)}
             >
-                <MenuIcon />
-              
+              <MenuIcon />
             </IconButton>
             <Typography
               variant="h6"
@@ -264,9 +265,17 @@ export default function MainHeader() {
                 aria-label="show 4 new mails"
                 color="inherit"
               >
-                <Badge badgeContent={4} color="error">
-                  <MailIcon />
-                </Badge>
+                <Switch
+                  onChange={() => {
+                    console.log("change");
+                    let payload =
+                      GlobalState.theme.theme == "dark" ? "light" :"dark" ;
+                    dispatchState(ActionTheme.SetTheme(payload));
+                  }}
+                  color="secondary"
+                  {...label}
+                  defaultChecked
+                />
               </IconButton>
               <IconButton
                 size="large"

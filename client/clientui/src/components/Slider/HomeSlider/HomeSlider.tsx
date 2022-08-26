@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import style from "./HomeSlider.module.css";
@@ -15,6 +15,7 @@ interface StateType {
 }
 
 export default function HomeSlider() {
+  const id = useId();
   const [state, SetState] = useState<StateType>({
     ListItemBanner: [],
   });
@@ -48,9 +49,10 @@ export default function HomeSlider() {
       >
         {state.ListItemBanner.length >= 0 &&
           state.ListItemBanner.map((item: any, idx: any) => {
+            
             return (
               <>
-                <SwiperSlide>
+                <SwiperSlide key={`${Date.now()}${Math.random()}`}>
                   <img
                     width={"100%"}
                     height={"auto"}
