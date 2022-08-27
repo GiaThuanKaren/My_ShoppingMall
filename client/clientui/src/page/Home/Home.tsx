@@ -4,28 +4,10 @@ import { FetchPopularProduct, FetchProductByCatologe } from "../../api";
 import { HomeSlider, ListProduct } from "../../components";
 interface State {
   DataList1: [];
-  DataList2?: [];
-  DataList3?: [];
-  DataList4?: [];
-  DataList5?: [];
-  DataList6?: [];
-  DataList7?: [];
-  DataList8?: [];
-  DataList9?: [];
-  DataList10?: [];
 }
 function Home() {
   const [state, SetState] = useState<State>({
     DataList1: [],
-    DataList2: [],
-    DataList3: [],
-    DataList4: [],
-    DataList5: [],
-    DataList6: [],
-    DataList7: [],
-    DataList8: [],
-    DataList9: [],
-    DataList10: [],
   });
   useEffect(() => {
     async function FetchApi() {
@@ -38,6 +20,7 @@ function Home() {
     }
     FetchApi();
   }, []);
+
   return (
     <>
       <HomeSlider />

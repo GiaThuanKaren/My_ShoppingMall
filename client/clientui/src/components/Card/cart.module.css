@@ -1,0 +1,13 @@
+.Card_Main_Container{
+    width: 100%;
+    height: 300px;
+}
+
+.Card_Name_product{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}

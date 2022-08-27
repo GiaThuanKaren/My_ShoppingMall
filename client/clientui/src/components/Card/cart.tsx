@@ -4,18 +4,24 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Grid } from "@mui/material";
+import style from "./cart.module.css";
+import clsx from "clsx";
 
 interface Props {
   tittle?: string;
   imageUrl?: string;
-  price?:number
+  price?: number;
 }
 
-export default function CardProduct({ imageUrl = "", tittle = "" ,price}: Props) {
+export default function CardProduct({
+  imageUrl = "",
+  tittle = "",
+  price,
+}: Props) {
   return (
     <>
       <Grid item xl={2} lg={2} md={2} sm={4} xs={6}>
-        <Card sx={{ width: "100%" }}>
+        <Card className={clsx([style.Card_Main_Container])}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -28,7 +34,11 @@ export default function CardProduct({ imageUrl = "", tittle = "" ,price}: Props)
               alt="green iguana"
             />
             <CardContent>
-              <Typography gutterBottom component="p">
+              <Typography
+                className={clsx([style.Card_Name_product])}
+                gutterBottom
+                component="p"
+              >
                 {tittle}
               </Typography>
               <Typography variant="body2" color="text.secondary">
