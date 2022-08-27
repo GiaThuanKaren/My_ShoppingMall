@@ -44,6 +44,7 @@ export default function CardProduct({
               <Typography variant="body2" color="text.secondary">
                 {price}
               </Typography>
+              
             </CardContent>
           </CardActionArea>
         </Card>

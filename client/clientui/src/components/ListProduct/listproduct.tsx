@@ -18,9 +18,10 @@ function ListProduct({
   console.log(Data);
   return (
     <>
-      <Box sx={{ margin: "5px 0" }}>
-        <Box className={clsx([style.ListProduct_Wrapp_Heading_Text])}>
+      <Box className={clsx([style.ListProduct_MainContainer])}>
+        {isTittleCenter == true && (
           <Typography
+            sx={{ margin: "5px 0" }}
             component={"h3"}
             fontSize={"1.2rem"}
             fontWeight={500}
@@ -28,17 +29,36 @@ function ListProduct({
           >
             {tittle}
           </Typography>
-          <Typography
-            component={"h3"}
-            fontSize={"1.2rem"}
-            fontWeight={500}
-            textAlign={isTittleCenter && "center"}
-          >
-            <Link to={"/product"}>See All</Link>
-          </Typography>
-        </Box>
+        )}
 
-        <Grid container spacing={3}>
+        {isTittleCenter == false && (
+          <>
+            <Box className={clsx([style.ListProduct_Wrapp_Heading_Text])}>
+              <Typography
+                component={"h3"}
+                fontSize={"1.2rem"}
+                fontWeight={500}
+                textAlign={isTittleCenter && "center"}
+              >
+                {tittle}
+              </Typography>
+              <Typography
+                component={"h3"}
+                fontSize={"1.2rem"}
+                fontWeight={500}
+                textAlign={isTittleCenter && "center"}
+              >
+                <Link to={"/product"}>See All</Link>
+              </Typography>
+            </Box>
+          </>
+        )}
+
+        <Grid
+          className={clsx([style.ListProduct_Container_Product])}
+          container
+          spacing={3}
+        >
           {/* <CardProduct /> */}
           {Data.map((item: any, index: any) => {
             return (

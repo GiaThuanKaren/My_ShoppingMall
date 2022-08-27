@@ -28,11 +28,15 @@ function Home() {
         state.DataList1.map((item: any, idx: any) => {
           return (
             <>
-              <ListProduct tittle={item.title} Data={item.products} />
+              <ListProduct tittle={item.title} Data={item.products} isTittleCenter/>
             </>
           );
         })}
-      <Grid container></Grid>
+      <Grid container>
+        <Grid item>List </Grid>
+        <Grid item>List</Grid>
+        <Grid item>List</Grid>
+      </Grid>
     </>
   );
 }

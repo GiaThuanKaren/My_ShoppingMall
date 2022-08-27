@@ -7,3 +7,15 @@
     /* padding: 2px 5px ; */
     /* margin: 0 5px; */
 }
+
+
+.ListProduct_MainContainer{
+    margin: 5px 0;
+    padding: 5px 2px  ;
+
+}
+
+
+.ListProduct_Container_Product{
+    padding: 3px;
+}
