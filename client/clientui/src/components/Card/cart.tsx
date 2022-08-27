@@ -33,7 +33,7 @@ export default function CardProduct({
               }
               alt="green iguana"
             />
-            <CardContent>
+            <CardContent> 
               <Typography
                 className={clsx([style.Card_Name_product])}
                 gutterBottom
