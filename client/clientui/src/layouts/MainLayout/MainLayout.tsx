@@ -1,12 +1,13 @@
-import { Box, createTheme, Paper, ThemeProvider } from "@mui/material";
+import { Box, createTheme, Divider, Paper, ThemeProvider } from "@mui/material";
 import React from "react";
-import { MainHeader } from "../../components";
+import { MainFooter, MainHeader } from "../../components";
 import { UseGlobal } from "../../hooks";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 import { amber, deepOrange, grey } from "@mui/material/colors";
 import { PaletteMode } from "@mui/material";
 interface Props {
@@ -63,6 +64,8 @@ function MainLayout({ children }: Props) {
             <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
             <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
           </BottomNavigation> */}
+          <Divider />
+          <MainFooter />
         </Paper>
       </ThemeProvider>
     </>

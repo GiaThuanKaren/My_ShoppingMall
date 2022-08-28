@@ -6,29 +6,33 @@ import CardProduct from "../Card/cart";
 
 import style from "./listproduct.module.css";
 interface Prop1 {
-  tittle?: String;
+  tittle?: string;
   Data?: [];
   isTittleCenter?: Boolean;
+  slug?: string;
 }
 function ListProduct({
   tittle = "Default Tittle",
   Data = [],
   isTittleCenter = false,
+  slug,
 }: Prop1) {
   console.log(Data);
   return (
-    <> 
+    <>
       <Box className={clsx([style.ListProduct_MainContainer])}>
         {isTittleCenter == true && (
-          <Typography
-            sx={{ margin: "5px 0" }}
-            component={"h3"}
-            fontSize={"1.2rem"}
-            fontWeight={500}
-            textAlign={isTittleCenter && "center"}
-          >
-            {tittle}
-          </Typography>
+          <Link to={`/product/${slug}`}>
+            <Typography
+              sx={{ margin: "5px 0" }}
+              component={"h3"}
+              fontSize={"1.2rem"}
+              fontWeight={500}
+              textAlign={isTittleCenter && "center"}
+            >
+              {tittle}
+            </Typography>
+          </Link>
         )}
 
         {isTittleCenter == false && (
@@ -42,14 +46,14 @@ function ListProduct({
               >
                 {tittle}
               </Typography>
-              <Typography
-                component={"h3"}
-                fontSize={"1.2rem"}
-                fontWeight={500}
-                textAlign={isTittleCenter && "center"}
-              >
-                <Link to={"/product"}>See All</Link>
-              </Typography>
+              <Link to={`/product/${slug}`}>
+                <Typography
+                  component={"h3"}
+                  fontSize={"1.2rem"}
+                  fontWeight={500}
+                  textAlign={isTittleCenter && "center"}
+                ></Typography>
+              </Link>
             </Box>
           </>
         )}

@@ -34,6 +34,7 @@ function Home() {
             return (
               <>
                 <ListProduct
+                  slug={item.slug}
                   tittle={item.title}
                   Data={item.products}
                   isTittleCenter
