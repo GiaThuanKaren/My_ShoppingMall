@@ -1,9 +1,14 @@
-import React from 'react'
+import { Grid } from "@mui/material";
+import React from "react";
 
-function RightSideBar() {
+function RightSideBar(): JSX.Element {
   return (
-    <div>RightSideBar</div>
-  )
+    <>
+      <Grid item lg={9} xl={3}>
+        <div>RightSideBar</div>
+      </Grid>
+    </>
+  );
 }
 
-export default RightSideBar
+export default RightSideBar;
