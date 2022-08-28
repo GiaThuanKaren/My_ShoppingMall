@@ -17,7 +17,7 @@ function ListProduct({
 }: Prop1) {
   console.log(Data);
   return (
-    <>
+    <> 
       <Box className={clsx([style.ListProduct_MainContainer])}>
         {isTittleCenter == true && (
           <Typography

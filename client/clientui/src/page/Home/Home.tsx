@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React, { useEffect, useId, useState } from "react";
 import { FetchPopularProduct, FetchProductByCatologe } from "../../api";
 import { HomeSlider, ListProduct } from "../../components";
@@ -28,15 +28,25 @@ function Home() {
         state.DataList1.map((item: any, idx: any) => {
           return (
             <>
-              <ListProduct tittle={item.title} Data={item.products} isTittleCenter/>
+              <ListProduct
+                tittle={item.title}
+                Data={item.products}
+                isTittleCenter
+              />
             </>
           );
         })}
-      <Grid container>
-        <Grid item>List </Grid>
-        <Grid item>List</Grid>
-        <Grid item>List</Grid>
-      </Grid>
+      <section>
+        <Grid container>
+          <Grid item>
+            <Typography component={"p"}>
+                Đăng ký để nhận ưu đãi
+            </Typography>
+          </Grid>
+          <Grid item>List</Grid>
+          <Grid item>List</Grid>
+        </Grid>
+      </section>
     </>
   );
 }
