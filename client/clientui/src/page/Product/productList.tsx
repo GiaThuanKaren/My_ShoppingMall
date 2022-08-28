@@ -1,9 +1,14 @@
+import { Grid } from "@mui/material";
 import React from "react";
+import { LeftSideBar, RightSideBar } from "../../layouts";
 
 function ProductList() {
   return (
     <>
-      <div>ProductList</div>
+      <Grid container spacing={2}>
+        <LeftSideBar />
+        <RightSideBar />
+      </Grid>
     </>
   );
 }

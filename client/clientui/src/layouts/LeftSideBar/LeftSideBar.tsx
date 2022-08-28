@@ -1,15 +1,18 @@
 import { Grid } from "@mui/material";
+import clsx from "clsx";
 import React, { FC } from "react";
 import { PropsSize } from "../../models";
 
-
-
-
-
-const LeftSideBar:FC<PropsSize> = function ({List}) {
+function LeftSideBar(): JSX.Element {
   return (
     <>
-      <Grid item lg={3} xl={3} md={2} sm={2} >
+      <Grid
+        className={`hidden-sm hidden-xs`}
+        item
+        lg={3}
+        xl={3}
+        md={2}
+      >
         <div>LeftSideBar</div>
       </Grid>
     </>
