@@ -1,6 +1,7 @@
 .Card_Main_Container{
     width: 100%;
     height: 300px;
+    position: relative;
 }
 
 .Card_Name_product{
@@ -10,4 +11,22 @@
     -webkit-line-clamp: 3; /* number of lines to show */
             line-clamp: 3; 
     -webkit-box-orient: vertical;
+}
+
+.Card_Discount_Tag{
+    --radius-degree:6px;
+    padding: 5px;
+    z-index: 1;
+    height: 25px;
+    line-height: 25px;
+    width: 22px;
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: var(--radius-degree);
+    border-bottom-right-radius: var(--radius-degree);
+    
+
 }

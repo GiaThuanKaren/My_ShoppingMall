@@ -4,6 +4,7 @@ function ListFilterBar() {
   return (
     <>
       <div>ProductListBar</div>
+      
     </>
   );
 }
