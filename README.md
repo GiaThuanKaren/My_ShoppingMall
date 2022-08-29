@@ -1,4 +1,5 @@
-# Real-Time-Order-Pizza__Socket.IO_ReactJS__
+# My_ShoppingMall
+
 
 # Các công nghệ được sử dụng 
   - Front end : React JS , Font Awesome , Redux , TailwindCSS, SocketIO Client,TypeScript
