@@ -1,7 +1,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import style from "./HomeSlider.module.css";
+import style from "./HomeSlide.module.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation, Autoplay, Pagination } from "swiper";
 import { FetchBanner } from "../../../api";
+import clsx from "clsx";
 
 interface StateType {
   ListItemBanner: [];
@@ -45,19 +46,22 @@ export default function HomeSlider() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        // className="mySwiper"
+        className={clsx([ "mySwiper"])}
       >
         {state.ListItemBanner.length >= 0 &&
           state.ListItemBanner.map((item: any, idx: any) => {
-            
             return (
               <>
-                <SwiperSlide key={`${Date.now()}${Math.random()}`}>
+                <SwiperSlide
+                  className={clsx([style.Swiper_Slider_item])}
+                  key={`${Date.now()}${Math.random()}`}
+                >
                   <img
                     width={"100%"}
-                    height={"auto"}
+                    height="auto"
                     style={{ objectFit: "contain" }}
-                    src={`https://cdn.vuahanghieu.com/unsafe/0x540/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/${item.image_url}`}
+                    src={`https://cdn.vuahanghieu.com/unsafe/0x960/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/${item.image_url}`}
                     alt={item.title}
                   />
                 </SwiperSlide>

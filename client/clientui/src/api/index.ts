@@ -5,14 +5,14 @@ const PRODUCT_BY_CATOLOGE = `https://api.vuahanghieu.com/service/product-by-cate
 const FILTER = `https://api.vuahanghieu.com/service/category/giay/products?&brand=Adidas&page=1`
 import axios from "axios";
 
-const FetchFilter= async function(){
-    try{
-
-    }catch(e){
-        console.log(e,"Fetch Filter");
+const FetchFilter = async function () {
+    try {
+        let data = await axios.get(FILTER);
+        return data.data;
+    } catch (e) {
+        console.log(e, "Fetch Filter");
     }
 }
-
 
 const FetchBanner = async function () {
     try {
@@ -54,4 +54,4 @@ const FetchPopularProduct = async function () {
 
 
 
-export { FetchBanner, FetchCatologe, FetchPopularProduct, FetchProductByCatologe };
+export {FetchFilter, FetchBanner, FetchCatologe, FetchPopularProduct, FetchProductByCatologe };

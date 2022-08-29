@@ -21,6 +21,7 @@ export interface GlobalStateType {
 
 export interface FilterCondition {
     List: [
+        slug ?:string,
         brand?: string,
         size?: string,
         material?: string,
@@ -33,5 +34,6 @@ export interface FilterCondition {
         promotion?: string,
         gifts?: string,
         price?: string,
+        
     ]
 }
