@@ -58,7 +58,7 @@ function MainLayout({ children }: Props) {
       <ThemeProvider theme={ThemeSystem}>
         <Paper>
           <MainHeader />
-          <Box sx={{ minHeight: "100vh" }}>{children}</Box>
+          <Box sx={{ minHeight: "100vh",marginTop:"10px" }}>{children}</Box>
           {/* <BottomNavigation showLabels>
             <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
             <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />

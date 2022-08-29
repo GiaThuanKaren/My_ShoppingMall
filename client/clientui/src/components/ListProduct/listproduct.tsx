@@ -22,7 +22,7 @@ function ListProduct({
     <>
       <Box className={clsx([style.ListProduct_MainContainer])}>
         {isTittleCenter == true && (
-          <Link to={`/product?${slug}`}>
+          <Link to={`/product?TagSlug=${slug}`}>
             <Typography
               sx={{ margin: "5px 0" }}
               component={"h3"}
@@ -46,7 +46,7 @@ function ListProduct({
               >
                 {tittle}
               </Typography>
-              <Link to={`/product?${slug}`}>
+              <Link to={`/product?TagSlug=${slug}`}>
                 <Typography
                   component={"h3"}
                   fontSize={"1.2rem"}
