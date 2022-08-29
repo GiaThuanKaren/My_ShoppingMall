@@ -10,8 +10,6 @@ export interface PropsSize {
     ]
 }
 
-
-
 export interface GlobalStateType {
     product: {
         Cart: []
