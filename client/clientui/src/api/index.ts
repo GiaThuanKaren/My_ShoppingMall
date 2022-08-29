@@ -4,9 +4,11 @@ const POPULAR_LINK = `https://api.vuahanghieu.com/service/manufacture/popular?pa
 const PRODUCT_BY_CATOLOGE = `https://api.vuahanghieu.com/service/product-by-category?pageSize=6&service_token=tuPdWKrMRY`;
 const FILTER = `https://api.vuahanghieu.com/service/category/giay/products?&brand=Adidas&page=1`
 import axios from "axios";
-
-const FetchFilter = async function () {
+import { FC } from "react";
+import {FilterCondition} from "../models"
+const FetchFilter = async function ({List}:FilterCondition) {
     try {
+        
         let data = await axios.get(FILTER);
         return data.data;
     } catch (e) {

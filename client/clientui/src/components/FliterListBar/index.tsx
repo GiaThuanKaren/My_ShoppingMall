@@ -8,11 +8,11 @@ import style from "./filterlistbar.module.css";
 import { Typography } from "@mui/material";
 import { FetchFilter } from "../../api";
 function ListFilterBar() {
-  useEffect(()=>{
-    async function FetchApi(){
-      let data = await FetchFilter();
+  useEffect(() => {
+    async function FetchApi() {
+      // let data = await FetchFilter();
     }
-  },[])
+  }, []);
   return (
     <>
       <div>ProductListBar</div>
@@ -21,7 +21,6 @@ function ListFilterBar() {
         <Typography component={"p"}>Gender</Typography>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
-          // defaultValue="female"
           name="radio-buttons-group"
         >
           <FormControlLabel value="female" control={<Radio />} label="Female" />
