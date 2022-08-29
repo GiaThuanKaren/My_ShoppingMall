@@ -20,3 +20,20 @@ export interface GlobalStateType {
         theme: PaletteMode
     }
 }
+
+export interface FilterCondition {
+    List: [
+        brand?: string,
+        size?: string,
+        material?: string,
+        ProductFrom?: string,
+        color?: string,
+        sex?: string,
+        form?: string,
+        classify?: string,
+        kindProdcut?: string,
+        promotion?: string,
+        gifts?: string,
+        price?: string,
+    ]
+}
