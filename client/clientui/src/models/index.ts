@@ -20,20 +20,19 @@ export interface GlobalStateType {
 }
 
 export interface FilterCondition {
-    List: [
-        slug ?:string,
-        brand?: string,
-        size?: string,
-        material?: string,
-        ProductFrom?: string,
-        color?: string,
-        sex?: string,
-        form?: string,
-        classify?: string,
-        kindProdcut?: string,
-        promotion?: string,
-        gifts?: string,
-        price?: string,
-        
-    ]
+    slug?: string,
+    brand?: string,
+    "size-giay-dep"?: string,
+    "chat-lieu"?: string,
+    "xuat-xu"?: string,
+    "mau-sac"?: string,
+    "gioi-tinh"?: string,
+    "kieu-dang"?: string,
+    "phan-loai"?: string,
+    "mat-hang"?: string,
+    promotion?: string,
+    gifts?: string,
+    price?: string,
+    page?: number,
+
 }
