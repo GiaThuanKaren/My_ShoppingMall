@@ -34,5 +34,4 @@ export interface FilterCondition {
     gifts?: string,
     price?: string,
     page?: number,
-
 }

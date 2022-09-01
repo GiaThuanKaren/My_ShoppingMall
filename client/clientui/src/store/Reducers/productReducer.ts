@@ -5,10 +5,13 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 const ProductState_GB = createSlice({
     name: "ProductState_GB",
     initialState: {
-        Cart: []
+        Cart: [],
+        ListProduct: []
     }
     , reducers: {
-
+        SetListProduct(state,action){
+            
+        }
     }
 })
 

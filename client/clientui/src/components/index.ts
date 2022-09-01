@@ -5,5 +5,5 @@ import MainHeader from "./Header";
 import ListProduct from "./ListProduct/listproduct";
 import HomeSlider from "./Slider/HomeSlider/HomeSlider";
 import VerticalTabs from "./TabScrollBar";
-
-export { ListFilterBar, MainHeader, VerticalTabs, HomeSlider, CardProduct, ListProduct, MainFooter };
+import FormFilterBar from "./Form/FormFilterBar";
+export { FormFilterBar, ListFilterBar, MainHeader, VerticalTabs, HomeSlider, CardProduct, ListProduct, MainFooter };

@@ -1,6 +1,6 @@
 export const PublicRoute = {
     Home :"/",
-    Product:"/product",
+    Product:"/product/:slug",
     ProductDetail:"/detail",    
 };
 
