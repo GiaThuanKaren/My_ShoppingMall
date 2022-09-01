@@ -6,4 +6,6 @@ import ListProduct from "./ListProduct/listproduct";
 import HomeSlider from "./Slider/HomeSlider/HomeSlider";
 import VerticalTabs from "./TabScrollBar";
 import FormFilterBar from "./Form/FormFilterBar";
-export { FormFilterBar, ListFilterBar, MainHeader, VerticalTabs, HomeSlider, CardProduct, ListProduct, MainFooter };
+import DisplayProduct from "./DisplayProduct";
+
+export { DisplayProduct, FormFilterBar, ListFilterBar, MainHeader, VerticalTabs, HomeSlider, CardProduct, ListProduct, MainFooter };

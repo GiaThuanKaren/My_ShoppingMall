@@ -1,7 +1,7 @@
 import { Button, Grid } from "@mui/material";
 import React from "react";
 import { useParams, useSearchParams } from "react-router-dom";
-import { ListFilterBar } from "../../components";
+import { DisplayProduct, ListFilterBar, ListProduct } from "../../components";
 import { LeftSideBar, RightSideBar } from "../../layouts";
 
 function ProductList() {
@@ -13,7 +13,7 @@ function ProductList() {
     <>
       <Grid className="margin_top_body body_page" container spacing={2}>
         <LeftSideBar component={<ListFilterBar />} />
-        <RightSideBar />
+        <RightSideBar component={<DisplayProduct  />} />
       </Grid>
     </>
   );
