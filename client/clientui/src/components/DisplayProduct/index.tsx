@@ -1,8 +1,10 @@
 import React, { ReactNode } from "react";
 interface Props {
   component?: ReactNode;
+  LinkCallApi?: string;
 }
-function DisplayProduct({ component }: Props) {
+function DisplayProduct({ component, LinkCallApi }: Props) {
+  
   return (
     <>
       <div>DisplayProduct</div>

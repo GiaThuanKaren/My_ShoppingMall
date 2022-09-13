@@ -11,46 +11,56 @@ interface Props {
   tittle?: string;
   imageUrl?: string;
   price?: number;
+  isSale?: boolean;
+  salePercent?: number;
 }
 
 export default function CardProduct({
   imageUrl = "",
   tittle = "",
   price,
+  isSale = false,
+  salePercent,
 }: Props) {
   return (
     <>
       <Grid item xl={2} lg={2} md={2} sm={4} xs={6}>
         <Card className={clsx([style.Card_Main_Container])}>
-          <div className={clsx(style.Card_Discount_Tag)}>
-            <Typography fontSize={"0.8rem"} textAlign={"center"} component={"p"}>
-              15%
-            </Typography>
-          </div>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={
-                imageUrl
-                  ? imageUrl
-                  : "https://images.unsplash.com/photo-1657299170237-2d4cd59b5156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              }
-              alt="green iguana"
-            />
-            <CardContent>
+          {salePercent && (
+            <div className={clsx(style.Card_Discount_Tag)}>
               <Typography
-                className={clsx([style.Card_Name_product])}
-                gutterBottom
-                component="p"
+                fontSize={"0.8rem"}
+                textAlign={"center"}
+                component={"p"}
               >
-                {tittle}
+                {salePercent}%
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {price}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
+            </div>
+          )}
+
+          <CardMedia
+            component="img"
+            height="140"
+            image={
+              imageUrl
+                ? imageUrl
+                : "https://images.unsplash.com/photo-1657299170237-2d4cd59b5156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            }
+            alt="green iguana"
+          />
+          <CardContent className={clsx([style.Card_Contend])}>
+            <Typography
+              className={clsx([style.Card_Name_product])}
+              gutterBottom
+              component="p"
+            >
+              {tittle}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {price}
+              {/* {price} */}
+            </Typography>
+          </CardContent>
         </Card>
       </Grid>
     </>

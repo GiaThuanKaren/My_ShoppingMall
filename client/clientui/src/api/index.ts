@@ -5,10 +5,10 @@ const PRODUCT_BY_CATOLOGE = `https://api.vuahanghieu.com/service/product-by-cate
 import axios from "axios";
 import { FC } from "react";
 import { FilterCondition } from "../models"
-const FetchFilter = async function ({ slug,}: FilterCondition) {
+const FetchFilter = async function ({ slug, querySearch }: any) {
     try {
         // const FILTER = `https://api.vuahanghieu.com/service/category/giay/products?&brand=Adidas&page=1`
-        let data = await axios.get(`https://api.vuahanghieu.com/service/category/${slug ? slug : "giay"}/products`);
+        let data = await axios.get(`https://api.vuahanghieu.com/service/category/${slug ? slug : "giay"}/products?${querySearch ? querySearch : ""}`);
         return data.data;
     } catch (e) {
         console.log(e, "Fetch Filter");

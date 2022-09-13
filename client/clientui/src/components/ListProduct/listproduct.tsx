@@ -10,6 +10,7 @@ interface Prop1 {
   Data?: [];
   isTittleCenter?: Boolean;
   slug?: string;
+  
 }
 function ListProduct({
   tittle = "Default Tittle",
@@ -70,7 +71,8 @@ function ListProduct({
                 <CardProduct
                   imageUrl={item.imageM}
                   tittle={item.title}
-                  price={item.price}
+                  price={item.priceShow}
+                  salePercent={item.discountRate}
                 />
               </>
             );

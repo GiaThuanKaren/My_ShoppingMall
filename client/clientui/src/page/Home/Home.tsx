@@ -24,6 +24,7 @@ function Home() {
     }
     FetchApi();
   }, []);
+// await  Promise.all()
 
   return (
     <>

@@ -13,6 +13,14 @@
     -webkit-box-orient: vertical;
 }
 
+.Card_Contend{
+    position: absolute;
+    margin-bottom: 5px;
+    /* bottom: 0; */
+    bottom: 0;
+}
+
+
 .Card_Discount_Tag{
     --radius-degree:6px;
     padding: 5px;
@@ -28,5 +36,8 @@
     border-bottom-left-radius: var(--radius-degree);
     border-bottom-right-radius: var(--radius-degree);
     
+}
 
+.Card_Sale_Price{
+    text-decoration: line-through;
 }
