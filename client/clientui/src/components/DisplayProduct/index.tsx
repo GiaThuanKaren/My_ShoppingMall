@@ -7,7 +7,7 @@ function DisplayProduct({ component, LinkCallApi }: Props) {
   
   return (
     <>
-      <div>DisplayProduct</div>
+      {component}
     </>
   );
 }

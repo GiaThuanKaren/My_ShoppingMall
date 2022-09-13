@@ -7,5 +7,6 @@ import HomeSlider from "./Slider/HomeSlider/HomeSlider";
 import VerticalTabs from "./TabScrollBar";
 import FormFilterBar from "./Form/FormFilterBar";
 import DisplayProduct from "./DisplayProduct";
+import { GetSkeleton } from "./ListSkeletonData";
 
-export { DisplayProduct, FormFilterBar, ListFilterBar, MainHeader, VerticalTabs, HomeSlider, CardProduct, ListProduct, MainFooter };
+export {GetSkeleton, DisplayProduct, FormFilterBar, ListFilterBar, MainHeader, VerticalTabs, HomeSlider, CardProduct, ListProduct, MainFooter };

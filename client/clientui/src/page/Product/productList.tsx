@@ -26,7 +26,7 @@ function ProductList() {
     <>
       <Grid className="margin_top_body body_page" container spacing={2}>
         <LeftSideBar component={<ListFilterBar />} />
-        <RightSideBar component={<DisplayProduct />} />
+        <RightSideBar component={<DisplayProduct component={<ListProduct Data={ProductData} />} />} />
       </Grid>
     </>
   );
