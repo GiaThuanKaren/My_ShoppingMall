@@ -6,6 +6,7 @@ import axios from "axios";
 import { FC } from "react";
 import { FilterCondition } from "../models"
 const FetchFilter = async function ({ slug, querySearch }: any) {
+    console.log(querySearch,"123");
     try {
         // const FILTER = `https://api.vuahanghieu.com/service/category/giay/products?&brand=Adidas&page=1`
         let data = await axios.get(`https://api.vuahanghieu.com/service/category/${slug ? slug : "giay"}/products?${querySearch ? querySearch : ""}`);

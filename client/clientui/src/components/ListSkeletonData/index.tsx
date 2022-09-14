@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-export const  n: React.FC = function () {
+export const  GetSkeleton: React.FC = function () {
   let arr: any = [];
   arr.length = 10;
   return (
@@ -33,6 +33,7 @@ export const  n: React.FC = function () {
                 <Button size="small">Share</Button>
                 <Button size="small">Learn More</Button>
               </CardActions>
+              
             </Card>
           </>
         );

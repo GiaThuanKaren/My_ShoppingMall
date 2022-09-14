@@ -13,15 +13,18 @@ function ProductList() {
   
   // console.log()
   const FetchApi =async function(PathQuery:string){
-    let data = await FetchFilter({slug,PathQuery});
+    console.log(PathQuery)
+    let data = await FetchFilter({slug,querySearch:PathQuery});
     console.log(data, "Result Filter ")
+    SetProductData(data.products.data)
   }
   useEffect(() => {
     let QueryStringURL= window.location.href.replaceAll(window.location.origin,"");
     console.log()
     let StringPath =QueryStringURL.substring(QueryStringURL.indexOf('?')+1) 
+    console.log(StringPath , " query String");
     FetchApi(StringPath)
-  }, []);
+  }, [ window.location.href]);
   return (
     <>
       <Grid className="margin_top_body body_page" container spacing={2}>
